@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+  {% for post in object_list  %}
+    <div class="post-entry" id='h'>
+      <h2><a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a></h2>
+      <p>{{post.body}}</p>
+    </div>
+  {% endfor %}
+{% endblock %}

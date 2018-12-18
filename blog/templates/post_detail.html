@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{{object_detail.title}}
+{{object_detail.body}}
+{% block content %}
+<a href="{% url 'blog:post_edit' object_detail.pk %}">Edit post</a>
+<a href="{% url 'blog:post_delete' object_detail.pk %}">Delete post</a>
+{% endblock %}
